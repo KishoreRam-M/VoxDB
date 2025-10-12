@@ -333,3 +333,105 @@ async def voxVoice(file: UploadFile = File(...)):
     response = await gemini_request(f"Process this command: {text}")
 
     return {"voice_text": text, "response": response}
+
+
+# ---------------------------------------------------------
+# 🧩 Interactive Student-Friendly Task Guidance
+# ---------------------------------------------------------
+@app.post("/interactive-task")
+async def interactive_task(request: Request):
+    """
+    Guides students step by step to perform tasks with detailed explanations.
+
+    Features:
+        1️⃣ Explains the task clearly (what, why, how it works).
+        2️⃣ Provides behind-the-scenes explanation of SQL/AI operations.
+        3️⃣ Asks simple interactive questions to engage the student.
+
+    Input JSON Example:
+    {
+        "prompt": "Show all students from CSE department",
+        "connection": { ... MySQL connection info ... }
+    }
+    """
+    body = await request.json()
+    prompt = body.get("prompt", "")
+    connection_info = body.get("connection", {})
+
+    if not prompt:
+        return {"error": "Prompt is missing."}
+    if not connection_info:
+        return {"error": "MySQL Database Connection info is missing."}
+
+    try:
+        # Step 1: Create dynamic engine
+        engine = Vox_Engine(connection_info)
+    except Exception as e:
+        return {"error": f"Engine creation failed: {str(e)}"}
+
+    try:
+        # Step 2: Explain task using AI
+        explanation_prompt = f"""
+        Explain step by step how to perform this task for a student:
+        {prompt}
+        Include:
+        - What the task is
+        - Why it's done
+        - How it works behind the scenes (SQL/AI)
+        - A simple question to ask the student
+        """
+        explanation = await gemini_request(explanation_prompt)
+    except Exception as e:
+        return {"error": f"Task explanation failed: {str(e)}"}
+
+    try:
+        # Step 3: Extract table names using AI (behind the scenes)
+        table_prompt = f"Extract table names (comma separated) from: {prompt}"
+        table_str = await gemini_request(table_prompt)
+        tables = [t.strip() for t in table_str.split(",") if t.strip()]
+
+        # Step 4: Fetch table schemas
+        schema_parts = []
+        with engine.begin() as conn:
+            for table in tables:
+                try:
+                    rows = conn.execute(text(f"DESCRIBE {table}")).fetchall()
+                    columns = [f"{row[0]} {row[1]}" for row in rows]
+                    schema_parts.append(f"{table}({', '.join(columns)})")
+                except SQLAlchemyError:
+                    continue
+        schema = "\n".join(schema_parts)
+
+    except Exception as e:
+        return {"error": f"Schema extraction failed: {str(e)}"}
+
+    try:
+        # Step 5: Generate SQL query using AI
+        sql_prompt = f"""
+        You are a MySQL expert. Using this schema:
+        {schema}
+        Generate a valid SQL query for: {prompt}
+        Return only SQL.
+        """
+        sql = await gemini_request(sql_prompt)
+
+        # Step 6: Execute SQL and return results
+        with engine.begin() as conn:
+            result = conn.execute(text(sql))
+            if sql.lower().startswith("select"):
+                rows = [dict(row._mapping) for row in result]
+            else:
+                rows = f"{result.rowcount} rows affected."
+
+    except Exception as e:
+        return {"error": f"SQL execution failed: {str(e)}"}
+
+    return {
+        "message": "Interactive task completed",
+        "task_explanation": explanation,
+        "tables": tables,
+        "schema": schema,
+        "sql": sql,
+        "result": rows
+    }
+
