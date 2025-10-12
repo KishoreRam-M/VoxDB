@@ -18,11 +18,13 @@ Project: VoxDB - Talk to Your Database
 # ---------------------------------------------------------
 # ✅ Import Required Libraries
 # ---------------------------------------------------------
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 import httpx
+from datetime import datetime
+import subprocess
 
 # ---------------------------------------------------------
 # 🔑 Gemini API Configuration
@@ -38,11 +40,12 @@ app = FastAPI(title="VoxDB - AI Database Assistant")
 # ---------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React Frontend
+    allow_origins=["http://localhost:5173"],  # Frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ---------------------------------------------------------
 # 🧠 Dynamic MySQL Engine Builder
@@ -51,6 +54,10 @@ def Vox_Engine(conn: dict):
     """
     Dynamically builds a MySQL SQLAlchemy engine
     from provided connection parameters.
+
+    :param conn: Dictionary containing 'user', 'password', 'host', 'port', 'database'
+    :return: SQLAlchemy Engine object
+    :raises: ValueError if connection info is invalid
     """
     try:
         db_url = (
@@ -62,13 +69,17 @@ def Vox_Engine(conn: dict):
     except Exception as e:
         raise ValueError(f"Invalid connection: {e}")
 
+
 # ---------------------------------------------------------
 # 🤖 Gemini AI Request Function
 # ---------------------------------------------------------
 async def gemini_request(prompt: str):
     """
     Sends a natural language prompt to Gemini AI
-    and returns a generated text (SQL, table names, etc.)
+    and returns a generated text (SQL, table names, tasks, etc.)
+
+    :param prompt: The user or system prompt to process
+    :return: AI-generated text response
     """
     headers = {
         "Authorization": f"Bearer {GEMINI_API_KEY}",
@@ -90,6 +101,7 @@ async def gemini_request(prompt: str):
         response.raise_for_status()
         result = response.json()
         return result.get("text", "").strip()
+
 
 # ---------------------------------------------------------
 # 🧩 AI-Powered SQL Query Endpoint
@@ -114,9 +126,9 @@ async def query_vox(request: Request):
         }
     }
     """
-    # -----------------------------------------------------
+    # ------------------------
     # Step 1: Parse Input
-    # -----------------------------------------------------
+    # ------------------------
     body = await request.json()
     prompt = body.get("prompt", "")
     connection_info = body.get("connection", {})
@@ -126,17 +138,17 @@ async def query_vox(request: Request):
     if not connection_info:
         return {"error": "MySQL Database Connection info is missing."}
 
-    # -----------------------------------------------------
+    # ------------------------
     # Step 2: Create SQLAlchemy Engine
-    # -----------------------------------------------------
+    # ------------------------
     try:
         engine = Vox_Engine(connection_info)
     except Exception as e:
         return {"error": f"Engine creation failed: {str(e)}"}
 
-    # -----------------------------------------------------
+    # ------------------------
     # Step 3: Extract Table Names Using AI
-    # -----------------------------------------------------
+    # ------------------------
     try:
         table_prompt = (
             f"Extract table names from this prompt "
@@ -147,9 +159,9 @@ async def query_vox(request: Request):
     except Exception as e:
         return {"error": f"Table extraction failed: {str(e)}"}
 
-    # -----------------------------------------------------
-    # Step 4: Fetch Table Schemas from Database
-    # -----------------------------------------------------
+    # ------------------------
+    # Step 4: Fetch Table Schemas
+    # ------------------------
     schema_parts = []
     try:
         with engine.begin() as conn:
@@ -159,16 +171,15 @@ async def query_vox(request: Request):
                     columns = [f"{row[0]} {row[1]}" for row in rows]
                     schema_parts.append(f"{table}({', '.join(columns)})")
                 except SQLAlchemyError:
-                    # Ignore missing or inaccessible tables
                     continue
     except Exception as e:
         return {"error": f"Schema extraction failed: {str(e)}"}
 
     schema = "\n".join(schema_parts)
 
-    # -----------------------------------------------------
-    # Step 5: Generate SQL Query via Gemini
-    # -----------------------------------------------------
+    # ------------------------
+    # Step 5: Generate SQL Query via AI
+    # ------------------------
     try:
         sql_prompt = f"""
         You are a MySQL expert. Using this schema:
@@ -176,17 +187,14 @@ async def query_vox(request: Request):
         Generate a valid SQL query for: {prompt}
         Return only SQL.
         """
-
         sql = await gemini_request(sql_prompt)
 
-        # -------------------------------------------------
+        # ------------------------
         # Step 6: Execute SQL on the Database
-        # -------------------------------------------------
+        # ------------------------
         with engine.begin() as conn:
             result = conn.execute(text(sql))
-
             if sql.lower().startswith("select"):
-                # Convert rows to dictionary for JSON response
                 rows = [dict(row._mapping) for row in result]
                 return {
                     "sql": sql,
@@ -194,7 +202,6 @@ async def query_vox(request: Request):
                     "message": "Query executed successfully."
                 }
             else:
-                # For INSERT, UPDATE, DELETE, etc.
                 return {
                     "sql": sql,
                     "message": f"{result.rowcount} rows affected."
@@ -202,3 +209,127 @@ async def query_vox(request: Request):
 
     except Exception as e:
         return {"error": f"Server error: {e}"}
+
+
+# ---------------------------------------------------------
+# 📝 AI Task & Comment System
+# ---------------------------------------------------------
+@app.post("/task")
+async def create_task(request: Request):
+    """
+    Creates a task and comment using AI interpretation.
+
+    Input JSON Example:
+    {
+        "prompt": "Add a new column 'role' to the users table",
+        "connection": { ... MySQL connection info ... }
+    }
+    """
+    body = await request.json()
+    task_prompt = body.get("prompt", "")
+    connection_info = body.get("connection", {})
+
+    if not task_prompt:
+        return {"error": "Prompt is missing."}
+    if not connection_info:
+        return {"error": "MySQL Database Connection info is missing."}
+
+    try:
+        engine = Vox_Engine(connection_info)
+
+        # AI-generated task and comment
+        task_text = await gemini_request(
+            f"Extract task description and comment clearly from this: {task_prompt}"
+        )
+
+        with engine.begin() as conn:
+            # Create tasks table if it doesn't exist
+            conn.execute(text("""
+                              CREATE TABLE IF NOT EXISTS tasks
+                              (
+                                  id
+                                  INT
+                                  AUTO_INCREMENT
+                                  PRIMARY
+                                  KEY,
+                                  description
+                                  TEXT,
+                                  comment
+                                  TEXT,
+                                  status
+                                  VARCHAR
+                              (
+                                  20
+                              ) DEFAULT 'pending',
+                                  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                                  )
+                              """))
+
+            # Insert new task
+            conn.execute(
+                text("INSERT INTO tasks (description, comment) VALUES (:desc, :comm)"),
+                {"desc": task_text, "comm": task_text}
+            )
+
+        return {"message": "Task created successfully", "task": task_text}
+
+    except Exception as e:
+        return {"error": str(e)}
+
+
+# ---------------------------------------------------------
+# 💾 Database Backup Endpoint
+# ---------------------------------------------------------
+@app.post("/backup")
+async def backup_db(request: Request):
+    """
+    Backup MySQL database (requires mysqldump installed).
+
+    Input JSON Example:
+    {
+        "connection": { ... MySQL connection info ... }
+    }
+    """
+    body = await request.json()
+    conn_info = body.get("connection", {})
+
+    try:
+        backup_file = f"{conn_info['database']}_backup_{datetime.now().strftime('%Y%m%d%H%M%S')}.sql"
+        cmd = [
+            "mysqldump",
+            "-h", conn_info['host'],
+            "-P", str(conn_info['port']),
+            "-u", conn_info['user'],
+            f"-p{conn_info['password']}",
+            conn_info['database']
+        ]
+        with open(backup_file, "w") as f:
+            subprocess.run(cmd, stdout=f, check=True)
+
+        return {"message": "Backup completed", "file": backup_file}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+# ---------------------------------------------------------
+# 🎙️ Voice Command Endpoint
+# ---------------------------------------------------------
+@app.post("/voice")
+async def voxVoice(file: UploadFile = File(...)):
+    """
+    Receive voice file, convert to text, and process via Gemini AI.
+
+    :param file: Audio file (WAV/MP3)
+    :return: JSON containing recognized text and AI response
+    """
+    import speech_recognition as sr
+
+    re = sr.Recognizer()
+    audio_data = sr.AudioFile(file.file)
+    with audio_data as source:
+        audio = re.record(source)
+
+    text = re.recognize_google(audio)
+    response = await gemini_request(f"Process this command: {text}")
+
+    return {"voice_text": text, "response": response}
