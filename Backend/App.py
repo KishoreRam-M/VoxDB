@@ -5,7 +5,6 @@ from sqlalchemy.exc import SQLAlchemyError
 import httpx
 
 # Gemini API Key
-GEMINI_API_KEY = "AIzaSyD9lwGeVMOusHmvEizWDEC-Gcd4W7Ro7iY"
 
 # FastAPI instance
 app = FastAPI()
