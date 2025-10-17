@@ -1,0 +1,420 @@
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-16 21:30:44 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-16 21:30:44 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-16 21:30:44 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Environment: development
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Debug mode: False
+2025-10-16 21:30:44 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-16 21:30:44 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: D:\Vox
+
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Environment: development
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Debug mode: False
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Debug mode: False
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-16 21:30:44 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-16 21:30:44 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-16 21:33:34 [INFO] OptiVox_DB - [843e08d4-96f5-4462-ac00-6613e4c5cb39] GET /api/health
+2025-10-16 21:33:34 [INFO] OptiVox_DB - [843e08d4-96f5-4462-ac00-6613e4c5cb39] 200 (0.001s)
+2025-10-16 21:33:59 [INFO] OptiVox_DB - [35112104-86d3-4f9d-962f-c5a94d06c837] POST /api/chat
+2025-10-16 21:33:59 [INFO] OptiVox_DB - Session created: session_4b0a5f2f
+2025-10-16 21:33:59 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 21:33:59 [INFO] OptiVox_DB - [35112104-86d3-4f9d-962f-c5a94d06c837] 500 (0.035s)
+2025-10-16 21:34:29 [INFO] OptiVox_DB - [0ef289e2-f694-4076-b5fd-703cc38fe963] POST /api/chat
+2025-10-16 21:34:29 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 21:34:29 [INFO] OptiVox_DB - [0ef289e2-f694-4076-b5fd-703cc38fe963] 500 (0.002s)
+2025-10-16 21:34:40 [INFO] OptiVox_DB - [4b51582b-77de-4bfd-a1a9-cf213c5bc3da] POST /api/chat
+2025-10-16 21:34:40 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 21:34:40 [INFO] OptiVox_DB - [4b51582b-77de-4bfd-a1a9-cf213c5bc3da] 500 (0.002s)
+2025-10-16 21:34:55 [INFO] OptiVox_DB - [57b1d694-102b-405a-8c44-ef55a9c79071] POST /api/chat
+2025-10-16 21:34:55 [INFO] OptiVox_DB - Session created: session_edfd12f2
+2025-10-16 21:34:55 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 21:34:55 [INFO] OptiVox_DB - [57b1d694-102b-405a-8c44-ef55a9c79071] 500 (0.000s)
+2025-10-16 22:03:47 [INFO] OptiVox_DB - [d6057822-d727-407a-97fe-64074eb18fc1] POST /api/chat
+2025-10-16 22:03:47 [INFO] OptiVox_DB - Session created: session_5ee476a7
+2025-10-16 22:03:47 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:03:47 [INFO] OptiVox_DB - [d6057822-d727-407a-97fe-64074eb18fc1] 500 (0.000s)
+2025-10-16 22:03:49 [INFO] OptiVox_DB - [2d432dfb-74e0-4ff5-b13b-ce6217c06639] GET /api/chat
+2025-10-16 22:03:49 [INFO] OptiVox_DB - [2d432dfb-74e0-4ff5-b13b-ce6217c06639] 405 (0.000s)
+2025-10-16 22:03:49 [INFO] OptiVox_DB - [d5d8d71d-43f0-48d4-ac38-0fa0196e8956] GET /favicon.ico
+2025-10-16 22:03:49 [INFO] OptiVox_DB - [d5d8d71d-43f0-48d4-ac38-0fa0196e8956] 404 (0.000s)
+2025-10-16 22:03:56 [INFO] OptiVox_DB - [e4ef20cf-f484-4bea-8c3e-0e7f613f2fc0] GET /docs
+2025-10-16 22:03:56 [INFO] OptiVox_DB - [e4ef20cf-f484-4bea-8c3e-0e7f613f2fc0] 200 (0.000s)
+2025-10-16 22:03:57 [INFO] OptiVox_DB - [7e928f8f-82d7-45fa-be57-b6afcca98d73] GET /openapi.json
+2025-10-16 22:03:57 [INFO] OptiVox_DB - [7e928f8f-82d7-45fa-be57-b6afcca98d73] 200 (0.034s)
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-16 22:05:24 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-16 22:05:24 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Environment: development
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Debug mode: False
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-16 22:05:24 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-16 22:05:24 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-16 22:05:24 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-16 22:05:45 [INFO] OptiVox_DB - [1df69916-6030-4b4d-bdc3-40f798934103] GET /api/health
+2025-10-16 22:05:45 [INFO] OptiVox_DB - [1df69916-6030-4b4d-bdc3-40f798934103] 200 (0.001s)
+2025-10-16 22:06:06 [INFO] OptiVox_DB - [a4c577c4-0efb-43d3-8fa7-8ae5622dc96e] POST /api/chat
+2025-10-16 22:06:06 [INFO] OptiVox_DB - Session created: session_07d33c32
+2025-10-16 22:06:06 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:06:06 [INFO] OptiVox_DB - [a4c577c4-0efb-43d3-8fa7-8ae5622dc96e] 500 (0.003s)
+2025-10-16 22:07:32 [INFO] OptiVox_DB - [aadd7206-c648-4a04-8937-71f3abd28ded] GET /api/chat
+2025-10-16 22:07:32 [INFO] OptiVox_DB - [aadd7206-c648-4a04-8937-71f3abd28ded] 405 (0.000s)
+2025-10-16 22:07:38 [INFO] OptiVox_DB - [3eed567a-8bf2-4f72-94c9-2412359162c2] GET /docs
+2025-10-16 22:07:38 [INFO] OptiVox_DB - [3eed567a-8bf2-4f72-94c9-2412359162c2] 200 (0.000s)
+2025-10-16 22:07:38 [INFO] OptiVox_DB - [a4c0def7-2c0a-4f03-975a-af047480c0a8] GET /openapi.json
+2025-10-16 22:07:38 [INFO] OptiVox_DB - [a4c0def7-2c0a-4f03-975a-af047480c0a8] 200 (0.001s)
+2025-10-16 22:08:05 [INFO] OptiVox_DB - [3e2397d2-a4bb-4f5b-affb-1a2b2c9c9f57] POST /api/chat
+2025-10-16 22:08:05 [INFO] OptiVox_DB - Session created: string
+2025-10-16 22:08:05 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:08:05 [INFO] OptiVox_DB - [3e2397d2-a4bb-4f5b-affb-1a2b2c9c9f57] 500 (0.000s)
+2025-10-16 22:10:33 [INFO] OptiVox_DB - [21245abf-f9b8-4a49-8fbd-1c55db22bca0] POST /api/chat
+2025-10-16 22:10:33 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:10:33 [INFO] OptiVox_DB - [21245abf-f9b8-4a49-8fbd-1c55db22bca0] 500 (0.002s)
+2025-10-16 22:10:49 [INFO] OptiVox_DB - [e53bbec6-3555-4a83-9a94-8c2e8f742885] POST /api/chat
+2025-10-16 22:10:49 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:10:49 [INFO] OptiVox_DB - [e53bbec6-3555-4a83-9a94-8c2e8f742885] 500 (0.000s)
+2025-10-16 22:14:13 [INFO] OptiVox_DB - [dc6c3914-1c5c-4103-8027-5d9c9c97a2ae] GET /api/learn/topics
+2025-10-16 22:14:13 [INFO] OptiVox_DB - [dc6c3914-1c5c-4103-8027-5d9c9c97a2ae] 200 (0.003s)
+2025-10-16 22:14:17 [INFO] OptiVox_DB - [19793b7a-b872-4b03-97d4-055db235d9c6] GET /api/learn/topics
+2025-10-16 22:14:17 [INFO] OptiVox_DB - [19793b7a-b872-4b03-97d4-055db235d9c6] 200 (0.000s)
+2025-10-16 22:14:18 [INFO] OptiVox_DB - [b6c55a0b-dd07-48fb-bf12-bf3b821f6770] POST /api/learn/explain
+2025-10-16 22:14:34 [INFO] OptiVox_DB - [b6c55a0b-dd07-48fb-bf12-bf3b821f6770] 200 (15.283s)
+2025-10-16 22:14:34 [INFO] OptiVox_DB - [904a86e6-6391-4d56-95ee-9c6c4077d453] GET /api/learn/topics
+2025-10-16 22:14:34 [INFO] OptiVox_DB - [904a86e6-6391-4d56-95ee-9c6c4077d453] 200 (0.000s)
+2025-10-16 22:14:50 [INFO] OptiVox_DB - [345ff4ab-c477-4be0-8dc2-7db9eb9d229a] GET /api/learn/topics
+2025-10-16 22:14:50 [INFO] OptiVox_DB - [345ff4ab-c477-4be0-8dc2-7db9eb9d229a] 200 (0.000s)
+2025-10-16 22:14:50 [INFO] OptiVox_DB - [c0e6d3c3-8f53-41e9-beda-15911a224757] GET /api/learn/topics
+2025-10-16 22:14:50 [INFO] OptiVox_DB - [c0e6d3c3-8f53-41e9-beda-15911a224757] 200 (0.001s)
+2025-10-16 22:14:53 [INFO] OptiVox_DB - [2b60e62a-35f5-413e-9caf-38240a502f3d] GET /api/learn/topics
+2025-10-16 22:14:53 [INFO] OptiVox_DB - [2b60e62a-35f5-413e-9caf-38240a502f3d] 200 (0.001s)
+2025-10-16 22:14:53 [INFO] OptiVox_DB - [98c8a95c-cddd-4ab3-bb1d-28997c792a4b] GET /api/learn/topics
+2025-10-16 22:14:53 [INFO] OptiVox_DB - [98c8a95c-cddd-4ab3-bb1d-28997c792a4b] 200 (0.001s)
+2025-10-16 22:15:06 [INFO] OptiVox_DB - [c81f2644-a31d-4ece-995d-0ed038d8ac0b] GET /api/learn/topics
+2025-10-16 22:15:06 [INFO] OptiVox_DB - [c81f2644-a31d-4ece-995d-0ed038d8ac0b] 200 (0.000s)
+2025-10-16 22:15:07 [INFO] OptiVox_DB - [72367158-3ed1-4994-a941-c188f5098747] POST /api/learn/explain
+2025-10-16 22:15:28 [INFO] OptiVox_DB - [72367158-3ed1-4994-a941-c188f5098747] 200 (21.892s)
+2025-10-16 22:15:28 [INFO] OptiVox_DB - [a4d37540-d842-4746-97bd-bdb32dcd8409] GET /api/learn/topics
+2025-10-16 22:15:28 [INFO] OptiVox_DB - [a4d37540-d842-4746-97bd-bdb32dcd8409] 200 (0.001s)
+2025-10-16 22:24:11 [INFO] OptiVox_DB - [6f5a379f-386a-4034-a523-3cab7de510dd] POST /api/query/debug
+2025-10-16 22:24:15 [INFO] OptiVox_DB - [6f5a379f-386a-4034-a523-3cab7de510dd] 200 (3.730s)
+2025-10-16 22:25:34 [INFO] OptiVox_DB - [de91dfb2-d298-45d2-b093-18a83acf8c6f] POST /api/query/debug
+2025-10-16 22:25:39 [INFO] OptiVox_DB - [de91dfb2-d298-45d2-b093-18a83acf8c6f] 200 (5.414s)
+2025-10-16 22:25:59 [INFO] OptiVox_DB - [d1c3f355-dc7b-418c-a08e-d67bebde6ec7] GET /api/learn/topics
+2025-10-16 22:25:59 [INFO] OptiVox_DB - [d1c3f355-dc7b-418c-a08e-d67bebde6ec7] 200 (0.001s)
+2025-10-16 22:26:02 [INFO] OptiVox_DB - [63b7ce4d-cedb-432b-93f4-78ff74cd2c3c] POST /api/schema/analyze
+2025-10-16 22:26:02 [ERROR] OptiVox_DB - Schema analysis error: No module named 'pymysql'
+2025-10-16 22:26:02 [INFO] OptiVox_DB - [63b7ce4d-cedb-432b-93f4-78ff74cd2c3c] 500 (0.002s)
+2025-10-16 22:26:05 [INFO] OptiVox_DB - [924e3eb6-ad4a-4fb3-9292-ebe6c4dc4d9f] POST /api/schema/info
+2025-10-16 22:26:05 [ERROR] OptiVox_DB - Schema introspection error: No module named 'pymysql'
+2025-10-16 22:26:05 [INFO] OptiVox_DB - [924e3eb6-ad4a-4fb3-9292-ebe6c4dc4d9f] 500 (0.002s)
+2025-10-16 22:26:30 [INFO] OptiVox_DB - [bb4b69ef-8804-4278-9f3e-af1fde663ab7] POST /api/query/natural
+2025-10-16 22:26:30 [ERROR] OptiVox_DB - Natural query error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\query.py", line 42, in natural_language_query
+    engine = get_engine(request.connection.model_dump())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:26:30 [INFO] OptiVox_DB - [bb4b69ef-8804-4278-9f3e-af1fde663ab7] 500 (0.004s)
+2025-10-16 22:27:28 [INFO] OptiVox_DB - [a65ca568-92b9-4a4a-bc47-aa29f9e329f6] POST /api/schema/info
+2025-10-16 22:27:28 [ERROR] OptiVox_DB - Schema introspection error: No module named 'pymysql'
+2025-10-16 22:27:28 [INFO] OptiVox_DB - [a65ca568-92b9-4a4a-bc47-aa29f9e329f6] 500 (0.001s)
+2025-10-16 22:29:07 [INFO] OptiVox_DB - [c622d641-6f0a-4e91-9250-dedf7fe2cbb0] POST /api/query/debug
+2025-10-16 22:29:18 [INFO] OptiVox_DB - [c622d641-6f0a-4e91-9250-dedf7fe2cbb0] 200 (10.108s)
+2025-10-16 22:31:28 [INFO] OptiVox_DB - [3859a4a8-bcd3-4810-91c4-bf7e39c2bd67] POST /api/chat
+2025-10-16 22:31:28 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:31:28 [INFO] OptiVox_DB - [3859a4a8-bcd3-4810-91c4-bf7e39c2bd67] 500 (0.003s)
+2025-10-16 22:31:37 [INFO] OptiVox_DB - [9de0ac9e-f68b-4e5c-838a-181f97471cfa] POST /api/query/natural
+2025-10-16 22:31:37 [ERROR] OptiVox_DB - Natural query error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\query.py", line 42, in natural_language_query
+    engine = get_engine(request.connection.model_dump())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-16 22:31:37 [INFO] OptiVox_DB - [9de0ac9e-f68b-4e5c-838a-181f97471cfa] 500 (0.003s)

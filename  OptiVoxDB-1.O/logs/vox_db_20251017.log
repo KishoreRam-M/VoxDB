@@ -1,0 +1,1794 @@
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-17 10:32:42 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-17 10:32:42 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Environment: development
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Debug mode: False
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-17 10:32:42 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-17 10:32:42 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-17 10:32:42 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-17 10:32:42 [INFO] OptiVox_DB - [544d199e-d2bd-412c-a341-301e8772de94] GET /
+2025-10-17 10:32:42 [INFO] OptiVox_DB - [544d199e-d2bd-412c-a341-301e8772de94] 404 (0.008s)
+2025-10-17 10:32:42 [INFO] OptiVox_DB - [9b99c45f-4e3c-45bf-962d-a0beb55b08e2] GET /favicon.ico
+2025-10-17 10:32:42 [INFO] OptiVox_DB - [9b99c45f-4e3c-45bf-962d-a0beb55b08e2] 404 (0.000s)
+2025-10-17 10:33:51 [INFO] OptiVox_DB - [b82aee71-84ec-49af-8038-dc6b2b5e0636] POST /api/chat
+2025-10-17 10:33:51 [INFO] OptiVox_DB - Session created: session_606f9a1b
+2025-10-17 10:33:51 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-17 10:33:52 [INFO] OptiVox_DB - [b82aee71-84ec-49af-8038-dc6b2b5e0636] 500 (0.264s)
+2025-10-17 10:38:44 [INFO] OptiVox_DB - [1017d51c-3674-4b61-b082-dbacec1c3ef8] POST /api/chat
+2025-10-17 10:38:44 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-17 10:38:44 [INFO] OptiVox_DB - [1017d51c-3674-4b61-b082-dbacec1c3ef8] 500 (0.000s)
+2025-10-17 10:46:07 [INFO] OptiVox_DB - 🛑 OptiVox DB shutting down...
+2025-10-17 10:46:07 [INFO] OptiVox_DB - AI client closed
+2025-10-17 10:46:07 [INFO] OptiVox_DB - ✅ Shutdown complete
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-17 10:46:09 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-17 10:46:09 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Environment: development
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Debug mode: False
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-17 10:46:09 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-17 10:46:09 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-17 10:46:09 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-17 10:46:20 [INFO] OptiVox_DB - [68c0420a-21a5-41cb-a758-a51355a548e1] POST /api/chat
+2025-10-17 10:46:20 [INFO] OptiVox_DB - Session created: session_606f9a1b
+2025-10-17 10:46:20 [ERROR] OptiVox_DB - Chat error: No module named 'pymysql'
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 75, in create_database_engine
+    engine = create_engine(url, **engine_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\dialects\mysql\pymysql.py", line 89, in import_dbapi
+    return __import__("pymysql")
+           ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+2025-10-17 10:46:20 [INFO] OptiVox_DB - [68c0420a-21a5-41cb-a758-a51355a548e1] 500 (0.027s)
+2025-10-17 10:47:11 [INFO] OptiVox_DB - 🛑 OptiVox DB shutting down...
+2025-10-17 10:47:11 [INFO] OptiVox_DB - AI client closed
+2025-10-17 10:47:11 [INFO] OptiVox_DB - ✅ Shutdown complete
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-17 10:47:13 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-17 10:47:13 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Environment: development
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Debug mode: False
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-17 10:47:13 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-17 10:47:13 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-17 10:47:13 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-17 10:47:38 [INFO] OptiVox_DB - [60b1cfb0-a8f6-4348-8def-bdf29c8ba66a] GET /api/health
+2025-10-17 10:47:38 [INFO] OptiVox_DB - [60b1cfb0-a8f6-4348-8def-bdf29c8ba66a] 200 (0.000s)
+2025-10-17 10:47:41 [INFO] OptiVox_DB - [3b3780b1-d165-40c0-b79a-04a34354ad8d] POST /api/chat
+2025-10-17 10:47:41 [INFO] OptiVox_DB - Session created: session_963c4aa2
+2025-10-17 10:47:41 [INFO] OptiVox_DB - Database engine created: vox@localhost
+2025-10-17 10:47:42 [INFO] OptiVox_DB - Introspecting 0 tables...
+2025-10-17 10:47:42 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 10:47:43 [INFO] OptiVox_DB - Assistant response generated for session session_963c4aa2
+2025-10-17 10:47:43 [INFO] OptiVox_DB - [3b3780b1-d165-40c0-b79a-04a34354ad8d] 200 (2.022s)
+2025-10-17 10:48:11 [INFO] OptiVox_DB - [dcab85d5-eb6b-4511-a8a7-9dbf6f1e8bdd] POST /api/query/natural
+2025-10-17 10:48:13 [INFO] OptiVox_DB - Generated SQL: SELECT * FROM veltech_student;
+2025-10-17 10:48:13 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 10:48:13 [ERROR] OptiVox_DB - SQL error: (pymysql.err.ProgrammingError) (1146, "Table 'vox.veltech_student' doesn't exist")
+[SQL: SELECT * FROM veltech_student;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 10:48:13 [ERROR] OptiVox_DB - Natural query error: SQL execution error: (pymysql.err.ProgrammingError) (1146, "Table 'vox.veltech_student' doesn't exist")
+[SQL: SELECT * FROM veltech_student;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'vox.veltech_student' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1146, "Table 'vox.veltech_student' doesn't exist")
+[SQL: SELECT * FROM veltech_student;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\query.py", line 47, in natural_language_query
+    result = await query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 99, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: SQL execution error: (pymysql.err.ProgrammingError) (1146, "Table 'vox.veltech_student' doesn't exist")
+[SQL: SELECT * FROM veltech_student;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 10:48:13 [INFO] OptiVox_DB - [dcab85d5-eb6b-4511-a8a7-9dbf6f1e8bdd] 500 (2.011s)
+2025-10-17 10:48:20 [INFO] OptiVox_DB - [6bb1760a-0ed6-45d4-8d8b-e75dc7ad8031] POST /api/schema/info
+2025-10-17 10:48:20 [INFO] OptiVox_DB - [6bb1760a-0ed6-45d4-8d8b-e75dc7ad8031] 200 (0.000s)
+2025-10-17 10:48:25 [INFO] OptiVox_DB - [3a5397cf-5bd9-4f43-bff4-ccd131d0ef04] POST /api/schema/analyze
+2025-10-17 10:48:43 [INFO] OptiVox_DB - [3a5397cf-5bd9-4f43-bff4-ccd131d0ef04] 200 (18.401s)
+2025-10-17 10:49:35 [INFO] OptiVox_DB - [211425c9-1e76-447a-9804-c672cb5940ec] POST /api/chat
+2025-10-17 10:49:41 [INFO] OptiVox_DB - Assistant response generated for session session_963c4aa2
+2025-10-17 10:49:41 [INFO] OptiVox_DB - [211425c9-1e76-447a-9804-c672cb5940ec] 200 (5.822s)
+2025-10-17 10:50:12 [INFO] OptiVox_DB - [deeb0f28-bcd1-438c-8daa-cf68dd7f29a7] POST /api/query/natural
+2025-10-17 10:50:13 [INFO] OptiVox_DB - Generated SQL: This request does not involve SQL. It's a command to run a Python application using Uvicorn. Therefore, I cannot generate a SQL query.
+2025-10-17 10:50:13 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 10:50:13 [ERROR] OptiVox_DB - SQL error: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'This request does not involve SQL. It's a command to run a Python application us' at line 1")
+[SQL: This request does not involve SQL. It's a command to run a Python application using Uvicorn. Therefore, I cannot generate a SQL query.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 10:50:13 [ERROR] OptiVox_DB - Natural query error: SQL execution error: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'This request does not involve SQL. It's a command to run a Python application us' at line 1")
+[SQL: This request does not involve SQL. It's a command to run a Python application using Uvicorn. Therefore, I cannot generate a SQL query.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'This request does not involve SQL. It's a command to run a Python application us' at line 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'This request does not involve SQL. It's a command to run a Python application us' at line 1")
+[SQL: This request does not involve SQL. It's a command to run a Python application using Uvicorn. Therefore, I cannot generate a SQL query.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\query.py", line 47, in natural_language_query
+    result = await query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 99, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: SQL execution error: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'This request does not involve SQL. It's a command to run a Python application us' at line 1")
+[SQL: This request does not involve SQL. It's a command to run a Python application using Uvicorn. Therefore, I cannot generate a SQL query.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 10:50:13 [INFO] OptiVox_DB - [deeb0f28-bcd1-438c-8daa-cf68dd7f29a7] 500 (1.212s)
+2025-10-17 10:50:30 [INFO] OptiVox_DB - [7afc8a70-9adb-4cac-88dd-7f153e123959] GET /api/learn/topics
+2025-10-17 10:50:30 [INFO] OptiVox_DB - [7afc8a70-9adb-4cac-88dd-7f153e123959] 200 (0.000s)
+2025-10-17 10:51:56 [INFO] OptiVox_DB - [e0156f45-b78b-4f1e-a9e3-10126ab81b1b] GET /api/learn/topics
+2025-10-17 10:51:56 [INFO] OptiVox_DB - [e0156f45-b78b-4f1e-a9e3-10126ab81b1b] 200 (0.000s)
+2025-10-17 10:52:05 [INFO] OptiVox_DB - [32eede1b-52a1-4012-9d5a-c4cdda5fcf78] GET /api/learn/topics
+2025-10-17 10:52:05 [INFO] OptiVox_DB - [32eede1b-52a1-4012-9d5a-c4cdda5fcf78] 200 (0.000s)
+2025-10-17 10:52:18 [INFO] OptiVox_DB - [78794805-d694-4a3f-9348-818b42d6055e] POST /api/query/optimize
+2025-10-17 10:52:27 [INFO] OptiVox_DB - [78794805-d694-4a3f-9348-818b42d6055e] 200 (8.670s)
+2025-10-17 10:53:03 [INFO] OptiVox_DB - [7ba4623a-351b-4dec-8297-5b32bbf291eb] POST /api/query/execute
+2025-10-17 10:53:03 [INFO] OptiVox_DB - [7ba4623a-351b-4dec-8297-5b32bbf291eb] 422 (0.002s)
+2025-10-17 10:53:40 [INFO] OptiVox_DB - [4622612e-4557-45cf-bd48-ae7e394561a5] POST /api/query/execute
+2025-10-17 10:53:40 [INFO] OptiVox_DB - [4622612e-4557-45cf-bd48-ae7e394561a5] 422 (0.002s)
+2025-10-17 10:57:29 [INFO] OptiVox_DB - [5f50499f-1c18-4b60-a7ce-bb7b8cc2f91a] POST /api/query/execute
+2025-10-17 10:57:29 [INFO] OptiVox_DB - [5f50499f-1c18-4b60-a7ce-bb7b8cc2f91a] 422 (0.001s)
+2025-10-17 10:59:22 [INFO] OptiVox_DB - [d0a67f68-93ba-4486-8883-f73808310960] POST /api/chat
+2025-10-17 10:59:22 [INFO] OptiVox_DB - Session created: session_b38c96bd
+2025-10-17 10:59:22 [INFO] OptiVox_DB - Introspecting 0 tables...
+2025-10-17 10:59:22 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 10:59:25 [INFO] OptiVox_DB - Generated SQL: CREATE TABLE veltech_multitech_college_students (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255),
+    date_of_birth DATE,
+    gender ENUM('Male', 'Female', 'Other'),
+    email VARCHAR(255) UNIQUE,
+    phone_number VARCHAR(20),
+    address TEXT,
+    enrollment_date DATE NOT NULL,
+    major VARCHAR(255),
+    graduation_year YEAR,
+    gpa DECIMAL(3, 2),
+    credits_earned INT DEFAULT 0,
+    advisor_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+2025-10-17 10:59:25 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 10:59:25 [INFO] OptiVox_DB - Query affected 0 rows
+2025-10-17 10:59:25 [INFO] OptiVox_DB - Query executed for session session_b38c96bd
+2025-10-17 10:59:25 [INFO] OptiVox_DB - [d0a67f68-93ba-4486-8883-f73808310960] 200 (2.795s)
+2025-10-17 11:00:51 [INFO] OptiVox_DB - [5da40d29-0b87-4ff2-8b6c-6b6001125729] POST /api/schema/analyze
+2025-10-17 11:01:02 [INFO] OptiVox_DB - [5da40d29-0b87-4ff2-8b6c-6b6001125729] 200 (10.759s)
+2025-10-17 11:01:39 [INFO] OptiVox_DB - [ae984619-3627-4d4f-ae97-b14d54429c66] POST /api/schema/info
+2025-10-17 11:01:39 [INFO] OptiVox_DB - [ae984619-3627-4d4f-ae97-b14d54429c66] 200 (0.003s)
+2025-10-17 11:01:41 [INFO] OptiVox_DB - [011498c1-ed6b-414b-817c-d078c73306cf] POST /api/schema/analyze
+2025-10-17 11:01:55 [INFO] OptiVox_DB - [011498c1-ed6b-414b-817c-d078c73306cf] 200 (13.759s)
+2025-10-17 11:04:52 [INFO] OptiVox_DB - [598ba5cc-56f2-4f4f-9dc3-145cb2974d2f] POST /api/chat
+2025-10-17 11:04:52 [INFO] OptiVox_DB - Introspecting 1 tables...
+2025-10-17 11:04:52 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 11:04:55 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:04:55 [INFO] OptiVox_DB - [598ba5cc-56f2-4f4f-9dc3-145cb2974d2f] 200 (2.740s)
+2025-10-17 11:05:47 [INFO] OptiVox_DB - [f3f9a37b-f218-4b9d-ad3b-c253b106b24c] POST /api/chat
+2025-10-17 11:05:49 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:05:49 [INFO] OptiVox_DB - [f3f9a37b-f218-4b9d-ad3b-c253b106b24c] 200 (2.439s)
+2025-10-17 11:06:36 [INFO] OptiVox_DB - [93482c61-9389-41b2-8067-8fb934c0add5] POST /api/chat
+2025-10-17 11:06:38 [INFO] OptiVox_DB - Generated SQL: DESCRIBE veltech_multitech_college_students;
+2025-10-17 11:06:38 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 11:06:38 [INFO] OptiVox_DB - Query returned 16 rows
+2025-10-17 11:06:38 [INFO] OptiVox_DB - Query executed for session session_b38c96bd
+2025-10-17 11:06:38 [INFO] OptiVox_DB - [93482c61-9389-41b2-8067-8fb934c0add5] 200 (1.669s)
+2025-10-17 11:07:08 [INFO] OptiVox_DB - [fc8f08ea-1e75-41af-a172-150c9c9a8a3b] POST /api/chat
+2025-10-17 11:07:13 [INFO] OptiVox_DB - Generated SQL: INSERT INTO veltech_multitech_college_students (first_name, last_name, date_of_birth, gender, email, phone_number, address, enrollment_date, major, graduation_year, gpa, credits_earned, advisor_id)
+VALUES
+('Alice', 'Smith', '2001-05-15', 'Female', 'alice.smith@example.com', '123-456-7890', '123 Main St', '2020-09-01', 'Computer Science', 2024, 3.8, 120, 1),
+('Bob', 'Johnson', '2002-02-20', 'Male', 'bob.johnson@example.com', '987-654-3210', '456 Oak Ave', '2020-09-01', 'Electrical Engineering', 2024, 3.5, 110, 2),
+('Charlie', 'Williams', '2001-11-10', 'Male', 'charlie.williams@example.com', '555-123-4567', '789 Pine Ln', '2020-09-01', 'Mechanical Engineering', 2024, 3.9, 125, 3),
+('Diana', 'Brown', '2002-07-04', 'Female', 'diana.brown@example.com', '111-222-3333', '101 Elm Rd', '2020-09-01', 'Civil Engineering', 2024, 3.7, 115, 4),
+('Ethan', 'Davis', '2001-09-25', 'Male', 'ethan.davis@example.com', '444-555-6666', '222 Maple Dr', '2020-09-01', 'Chemical Engineering', 2024, 3.6, 112, 5);
+2025-10-17 11:07:13 [INFO] OptiVox_DB - Executing WRITE query
+2025-10-17 11:07:13 [INFO] OptiVox_DB - Query affected 5 rows
+2025-10-17 11:07:13 [INFO] OptiVox_DB - Query executed for session session_b38c96bd
+2025-10-17 11:07:13 [INFO] OptiVox_DB - [fc8f08ea-1e75-41af-a172-150c9c9a8a3b] 200 (4.936s)
+2025-10-17 11:07:36 [INFO] OptiVox_DB - [85e445e6-6f5c-47da-a745-926f54c91e5f] POST /api/chat
+2025-10-17 11:07:42 [INFO] OptiVox_DB - Generated SQL: SELECT 
+    student_id,
+    first_name,
+    last_name,
+    date_of_birth,
+    gender,
+    email,
+    phone_number,
+    address,
+    enrollment_date,
+    major,
+    graduation_year,
+    gpa,
+    credits_earned,
+    advisor_id,
+    created_at,
+    updated_at
+FROM 
+    veltech_multitech_college_students;
+2025-10-17 11:07:42 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 11:07:42 [INFO] OptiVox_DB - Query returned 5 rows
+2025-10-17 11:07:42 [INFO] OptiVox_DB - Query executed for session session_b38c96bd
+2025-10-17 11:07:42 [INFO] OptiVox_DB - [85e445e6-6f5c-47da-a745-926f54c91e5f] 200 (5.869s)
+2025-10-17 11:08:04 [INFO] OptiVox_DB - [2a9bb2bf-5e4b-427b-a062-db21175db891] POST /api/chat
+2025-10-17 11:08:04 [ERROR] OptiVox_DB - Chat error: Object of type date is not JSON serializable
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 40, in process_natural_query
+    sql = await ai_service.natural_language_to_sql(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\ai_service.py", line 212, in natural_language_to_sql
+    recent_history = json.dumps(conversation_history[-3:], indent=2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+2025-10-17 11:08:04 [INFO] OptiVox_DB - [2a9bb2bf-5e4b-427b-a062-db21175db891] 500 (0.057s)
+2025-10-17 11:08:14 [INFO] OptiVox_DB - [9a0830f0-e0e5-4365-94f8-a9ecf93ea9a2] POST /api/chat
+2025-10-17 11:08:14 [ERROR] OptiVox_DB - Chat error: Object of type date is not JSON serializable
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 40, in process_natural_query
+    sql = await ai_service.natural_language_to_sql(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\ai_service.py", line 212, in natural_language_to_sql
+    recent_history = json.dumps(conversation_history[-3:], indent=2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+2025-10-17 11:08:14 [INFO] OptiVox_DB - [9a0830f0-e0e5-4365-94f8-a9ecf93ea9a2] 500 (0.004s)
+2025-10-17 11:08:17 [INFO] OptiVox_DB - [00841499-a481-4d0c-832b-a7598482ff0f] POST /api/chat
+2025-10-17 11:08:17 [ERROR] OptiVox_DB - Chat error: Object of type date is not JSON serializable
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 40, in process_natural_query
+    sql = await ai_service.natural_language_to_sql(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\ai_service.py", line 212, in natural_language_to_sql
+    recent_history = json.dumps(conversation_history[-3:], indent=2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\KRM\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+2025-10-17 11:08:17 [INFO] OptiVox_DB - [00841499-a481-4d0c-832b-a7598482ff0f] 500 (0.005s)
+2025-10-17 11:08:36 [INFO] OptiVox_DB - [5008c13c-dc45-43f6-9ca2-3d8c80b4db82] POST /api/schema/info
+2025-10-17 11:08:36 [INFO] OptiVox_DB - [5008c13c-dc45-43f6-9ca2-3d8c80b4db82] 200 (0.003s)
+2025-10-17 11:08:41 [INFO] OptiVox_DB - [56abcc50-fcbe-4163-b418-d03e48c53935] POST /api/schema/analyze
+2025-10-17 11:08:59 [INFO] OptiVox_DB - [56abcc50-fcbe-4163-b418-d03e48c53935] 200 (18.603s)
+2025-10-17 11:10:01 [INFO] OptiVox_DB - [04116f31-0840-40f5-80e1-d6e5bcd9356f] POST /api/chat
+2025-10-17 11:10:01 [INFO] OptiVox_DB - Introspecting 1 tables...
+2025-10-17 11:10:01 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 11:10:03 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:10:03 [INFO] OptiVox_DB - [04116f31-0840-40f5-80e1-d6e5bcd9356f] 200 (2.379s)
+2025-10-17 11:10:23 [INFO] OptiVox_DB - [d6ce5515-cd3c-44e1-ab36-dcee1987b3db] POST /api/chat
+2025-10-17 11:10:25 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:10:25 [INFO] OptiVox_DB - [d6ce5515-cd3c-44e1-ab36-dcee1987b3db] 200 (1.541s)
+2025-10-17 11:10:45 [INFO] OptiVox_DB - [f37e9d70-a4f4-4834-9ae5-4e6f57b756aa] POST /api/chat
+2025-10-17 11:10:46 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:10:46 [INFO] OptiVox_DB - [f37e9d70-a4f4-4834-9ae5-4e6f57b756aa] 200 (1.480s)
+2025-10-17 11:11:17 [INFO] OptiVox_DB - [381e5f14-4f24-41c0-bdb8-27e36f251052] POST /api/chat
+2025-10-17 11:11:21 [INFO] OptiVox_DB - Assistant response generated for session session_b38c96bd
+2025-10-17 11:11:21 [INFO] OptiVox_DB - [381e5f14-4f24-41c0-bdb8-27e36f251052] 200 (3.958s)
+2025-10-17 11:54:46 [INFO] OptiVox_DB - [795b0b84-add1-4d12-af16-ea798f2b4cd8] POST /api/schema/analyze
+2025-10-17 11:54:46 [INFO] OptiVox_DB - Introspecting 1 tables...
+2025-10-17 11:54:46 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 11:55:06 [INFO] OptiVox_DB - [795b0b84-add1-4d12-af16-ea798f2b4cd8] 200 (20.173s)
+2025-10-17 11:56:59 [INFO] OptiVox_DB - [3e07d3a9-6bbf-4736-9f5f-308c52335d5f] POST /api/query/natural
+2025-10-17 11:56:59 [INFO] OptiVox_DB - Session created: session_4ff2e38b
+2025-10-17 11:57:00 [INFO] OptiVox_DB - Generated SQL: SELECT 
+  student_id,
+  first_name,
+  last_name,
+  date_of_birth,
+  gender,
+  email,
+  phone_number,
+  address,
+  enrollment_date,
+  major,
+  graduation_year,
+  gpa,
+  credits_earned,
+  advisor_id,
+  created_at,
+  updated_at
+FROM veltech_multitech_college_students;
+2025-10-17 11:57:00 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 11:57:00 [INFO] OptiVox_DB - Query returned 5 rows
+2025-10-17 11:57:00 [INFO] OptiVox_DB - [3e07d3a9-6bbf-4736-9f5f-308c52335d5f] 200 (1.570s)
+2025-10-17 11:58:10 [INFO] OptiVox_DB - [af0171f9-8fdd-4c52-aa66-b4fc28d0d4cb] GET /api/health
+2025-10-17 11:58:10 [INFO] OptiVox_DB - [af0171f9-8fdd-4c52-aa66-b4fc28d0d4cb] 200 (0.002s)
+2025-10-17 11:58:42 [INFO] OptiVox_DB - [cf88f85a-31f1-48ad-836d-799bb8ae8c4e] POST /api/chat
+2025-10-17 11:58:42 [INFO] OptiVox_DB - Session created: session_dffce203
+2025-10-17 11:58:42 [ERROR] OptiVox_DB - Database connection failed: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 11:58:42 [ERROR] OptiVox_DB - Chat error: Failed to connect to database: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 681, in connect
+    self._request_authentication()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 980, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\_auth.py", line 245, in caching_sha2_password_auth
+    pkt = conn._read_packet()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1049, "Unknown database 'root'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 78, in create_database_engine
+    with engine.connect() as test_conn:
+         ^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 681, in connect
+    self._request_authentication()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 980, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\_auth.py", line 245, in caching_sha2_password_auth
+    pkt = conn._read_packet()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 86, in create_database_engine
+    raise DatabaseConnectionError(
+utils.exceptions.DatabaseConnectionError: Failed to connect to database: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 11:58:42 [INFO] OptiVox_DB - [cf88f85a-31f1-48ad-836d-799bb8ae8c4e] 500 (0.083s)
+2025-10-17 11:58:58 [INFO] OptiVox_DB - [dca76e75-dc0a-4c1f-b436-6e5db9ed1092] POST /api/chat
+2025-10-17 11:58:59 [ERROR] OptiVox_DB - Database connection failed: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 11:58:59 [ERROR] OptiVox_DB - Chat error: Failed to connect to database: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 681, in connect
+    self._request_authentication()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 980, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\_auth.py", line 245, in caching_sha2_password_auth
+    pkt = conn._read_packet()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1049, "Unknown database 'root'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 78, in create_database_engine
+    with engine.connect() as test_conn:
+         ^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 681, in connect
+    self._request_authentication()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 980, in _request_authentication
+    auth_packet = _auth.caching_sha2_password_auth(self, auth_packet)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\_auth.py", line 245, in caching_sha2_password_auth
+    pkt = conn._read_packet()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 52, in process_chat_message
+    engine = get_engine(connection)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 117, in get_engine
+    engine = create_database_engine(conn, pooled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\engine.py", line 86, in create_database_engine
+    raise DatabaseConnectionError(
+utils.exceptions.DatabaseConnectionError: Failed to connect to database: (pymysql.err.OperationalError) (1049, "Unknown database 'root'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 11:58:59 [INFO] OptiVox_DB - [dca76e75-dc0a-4c1f-b436-6e5db9ed1092] 500 (0.019s)
+2025-10-17 12:01:22 [INFO] OptiVox_DB - [8c210847-b6e0-47cc-915b-2371663e01cc] POST /api/chat
+2025-10-17 12:01:22 [INFO] OptiVox_DB - Session created: session_5b4e18d7
+2025-10-17 12:01:22 [INFO] OptiVox_DB - Introspecting 1 tables...
+2025-10-17 12:01:22 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 12:01:26 [INFO] OptiVox_DB - Generated SQL: I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB" because the user request is ambiguous and lacks specific table schema details. To generate a `CREATE TABLE` statement, I need information like:
+*   **Table Name:** A specific name for the table (e.g., `optivox_users`, `optivox_data`).
+*   **Columns:** The names, data types, and constraints (e.g., `user_id INT PRIMARY KEY`, `username VARCHAR(255) NOT NULL`, `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`) for each column in the table.
+*   **Primary Key:** Which column (or columns) should be the primary key.
+*   **Foreign Keys:** If the table has relationships with other tables, the foreign key constraints.
+*   **Indexes:** Any indexes to improve query performance.
+Please provide a detailed table schema for your SaaS product so I can generate the appropriate `CREATE TABLE` statement.
+2025-10-17 12:01:26 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:01:26 [ERROR] OptiVox_DB - SQL error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB\' at line 1')
+[SQL: I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB" because the user request is ambiguous and lacks specific table schema details. To generate a `CREATE TABLE` statement, I need information like:
+*   **Table Name:** A specific name for the table (e.g., `optivox_users`, `optivox_data`).
+*   **Columns:** The names, data types, and constraints (e.g., `user_id INT PRIMARY KEY`, `username VARCHAR(255) NOT NULL`, `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`) for each column in the table.
+*   **Primary Key:** Which column (or columns) should be the primary key.
+*   **Foreign Keys:** If the table has relationships with other tables, the foreign key constraints.
+*   **Indexes:** Any indexes to improve query performance.
+Please provide a detailed table schema for your SaaS product so I can generate the appropriate `CREATE TABLE` statement.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 12:01:26 [ERROR] OptiVox_DB - Chat error: SQL execution error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB\' at line 1')
+[SQL: I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB" because the user request is ambiguous and lacks specific table schema details. To generate a `CREATE TABLE` statement, I need information like:
+*   **Table Name:** A specific name for the table (e.g., `optivox_users`, `optivox_data`).
+*   **Columns:** The names, data types, and constraints (e.g., `user_id INT PRIMARY KEY`, `username VARCHAR(255) NOT NULL`, `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`) for each column in the table.
+*   **Primary Key:** Which column (or columns) should be the primary key.
+*   **Foreign Keys:** If the table has relationships with other tables, the foreign key constraints.
+*   **Indexes:** Any indexes to improve query performance.
+Please provide a detailed table schema for your SaaS product so I can generate the appropriate `CREATE TABLE` statement.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB\' at line 1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB\' at line 1')
+[SQL: I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB" because the user request is ambiguous and lacks specific table schema details. To generate a `CREATE TABLE` statement, I need information like:
+*   **Table Name:** A specific name for the table (e.g., `optivox_users`, `optivox_data`).
+*   **Columns:** The names, data types, and constraints (e.g., `user_id INT PRIMARY KEY`, `username VARCHAR(255) NOT NULL`, `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`) for each column in the table.
+*   **Primary Key:** Which column (or columns) should be the primary key.
+*   **Foreign Keys:** If the table has relationships with other tables, the foreign key constraints.
+*   **Indexes:** Any indexes to improve query performance.
+Please provide a detailed table schema for your SaaS product so I can generate the appropriate `CREATE TABLE` statement.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 99, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: SQL execution error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB\' at line 1')
+[SQL: I cannot create a SQL query to create a table for your SaaS product "Opti Vox DB" because the user request is ambiguous and lacks specific table schema details. To generate a `CREATE TABLE` statement, I need information like:
+*   **Table Name:** A specific name for the table (e.g., `optivox_users`, `optivox_data`).
+*   **Columns:** The names, data types, and constraints (e.g., `user_id INT PRIMARY KEY`, `username VARCHAR(255) NOT NULL`, `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`) for each column in the table.
+*   **Primary Key:** Which column (or columns) should be the primary key.
+*   **Foreign Keys:** If the table has relationships with other tables, the foreign key constraints.
+*   **Indexes:** Any indexes to improve query performance.
+Please provide a detailed table schema for your SaaS product so I can generate the appropriate `CREATE TABLE` statement.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 12:01:26 [INFO] OptiVox_DB - [8c210847-b6e0-47cc-915b-2371663e01cc] 500 (4.138s)
+2025-10-17 12:04:43 [INFO] OptiVox_DB - [753ba748-a33a-453e-a04e-ee6657f15e66] POST /api/chat
+2025-10-17 12:04:53 [INFO] OptiVox_DB - Generated SQL: CREATE TABLE analytics_logs (
+    log_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, 
+    event_type VARCHAR(255) NOT NULL, 
+    event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    event_data JSON NULL, 
+    ip_address VARCHAR(45) NULL, 
+    user_agent TEXT NULL, 
+    session_id VARCHAR(255) NULL, 
+    page_url TEXT NULL, 
+    device_type ENUM('desktop', 'mobile', 'tablet', 'other') NULL, 
+    latitude DECIMAL(10, 8) NULL, 
+    longitude DECIMAL(11, 8) NULL, 
+    processing_status ENUM('pending', 'processing', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+    processing_attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    version INT UNSIGNED NOT NULL DEFAULT 1,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    INDEX idx_user_event (user_id, event_type), 
+    INDEX idx_event_timestamp (event_timestamp), 
+    FULLTEXT INDEX idx_event_data (event_data), 
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_processing_attempts CHECK (processing_attempts <= 10)
+);
+2025-10-17 12:04:53 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 12:04:53 [ERROR] OptiVox_DB - Operational error: (pymysql.err.OperationalError) (3152, "JSON column 'event_data' supports indexing only via generated columns on a specified JSON path.")
+[SQL: CREATE TABLE analytics_logs (
+    log_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, 
+    event_type VARCHAR(255) NOT NULL, 
+    event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    event_data JSON NULL, 
+    ip_address VARCHAR(45) NULL, 
+    user_agent TEXT NULL, 
+    session_id VARCHAR(255) NULL, 
+    page_url TEXT NULL, 
+    device_type ENUM('desktop', 'mobile', 'tablet', 'other') NULL, 
+    latitude DECIMAL(10, 8) NULL, 
+    longitude DECIMAL(11, 8) NULL, 
+    processing_status ENUM('pending', 'processing', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+    processing_attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    version INT UNSIGNED NOT NULL DEFAULT 1,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    INDEX idx_user_event (user_id, event_type), 
+    INDEX idx_event_timestamp (event_timestamp), 
+    FULLTEXT INDEX idx_event_data (event_data), 
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_processing_attempts CHECK (processing_attempts <= 10)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:04:53 [ERROR] OptiVox_DB - Chat error: Database operational error: (pymysql.err.OperationalError) (3152, "JSON column 'event_data' supports indexing only via generated columns on a specified JSON path.")
+[SQL: CREATE TABLE analytics_logs (
+    log_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, 
+    event_type VARCHAR(255) NOT NULL, 
+    event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    event_data JSON NULL, 
+    ip_address VARCHAR(45) NULL, 
+    user_agent TEXT NULL, 
+    session_id VARCHAR(255) NULL, 
+    page_url TEXT NULL, 
+    device_type ENUM('desktop', 'mobile', 'tablet', 'other') NULL, 
+    latitude DECIMAL(10, 8) NULL, 
+    longitude DECIMAL(11, 8) NULL, 
+    processing_status ENUM('pending', 'processing', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+    processing_attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    version INT UNSIGNED NOT NULL DEFAULT 1,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    INDEX idx_user_event (user_id, event_type), 
+    INDEX idx_event_timestamp (event_timestamp), 
+    FULLTEXT INDEX idx_event_data (event_data), 
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_processing_attempts CHECK (processing_attempts <= 10)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (3152, "JSON column 'event_data' supports indexing only via generated columns on a specified JSON path.")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3152, "JSON column 'event_data' supports indexing only via generated columns on a specified JSON path.")
+[SQL: CREATE TABLE analytics_logs (
+    log_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, 
+    event_type VARCHAR(255) NOT NULL, 
+    event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    event_data JSON NULL, 
+    ip_address VARCHAR(45) NULL, 
+    user_agent TEXT NULL, 
+    session_id VARCHAR(255) NULL, 
+    page_url TEXT NULL, 
+    device_type ENUM('desktop', 'mobile', 'tablet', 'other') NULL, 
+    latitude DECIMAL(10, 8) NULL, 
+    longitude DECIMAL(11, 8) NULL, 
+    processing_status ENUM('pending', 'processing', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+    processing_attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    version INT UNSIGNED NOT NULL DEFAULT 1,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    INDEX idx_user_event (user_id, event_type), 
+    INDEX idx_event_timestamp (event_timestamp), 
+    FULLTEXT INDEX idx_event_data (event_data), 
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_processing_attempts CHECK (processing_attempts <= 10)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 92, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: Database operational error: (pymysql.err.OperationalError) (3152, "JSON column 'event_data' supports indexing only via generated columns on a specified JSON path.")
+[SQL: CREATE TABLE analytics_logs (
+    log_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, 
+    event_type VARCHAR(255) NOT NULL, 
+    event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    event_data JSON NULL, 
+    ip_address VARCHAR(45) NULL, 
+    user_agent TEXT NULL, 
+    session_id VARCHAR(255) NULL, 
+    page_url TEXT NULL, 
+    device_type ENUM('desktop', 'mobile', 'tablet', 'other') NULL, 
+    latitude DECIMAL(10, 8) NULL, 
+    longitude DECIMAL(11, 8) NULL, 
+    processing_status ENUM('pending', 'processing', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+    processing_attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
+    version INT UNSIGNED NOT NULL DEFAULT 1,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    INDEX idx_user_event (user_id, event_type), 
+    INDEX idx_event_timestamp (event_timestamp), 
+    FULLTEXT INDEX idx_event_data (event_data), 
+    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_processing_attempts CHECK (processing_attempts <= 10)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:04:53 [INFO] OptiVox_DB - [753ba748-a33a-453e-a04e-ee6657f15e66] 500 (10.109s)
+2025-10-17 12:07:14 [INFO] OptiVox_DB - [54bc2113-f337-424c-b4f6-2c96c5c4083c] POST /api/chat
+2025-10-17 12:07:14 [INFO] OptiVox_DB - Introspecting 1 tables...
+2025-10-17 12:07:14 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 12:07:22 [INFO] OptiVox_DB - Generated SQL: CREATE TABLE users (
+    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id)
+);
+2025-10-17 12:07:22 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 12:07:22 [INFO] OptiVox_DB - Query affected 0 rows
+2025-10-17 12:07:22 [INFO] OptiVox_DB - Query executed for session session_5b4e18d7
+2025-10-17 12:07:22 [INFO] OptiVox_DB - [54bc2113-f337-424c-b4f6-2c96c5c4083c] 200 (7.903s)
+2025-10-17 12:08:40 [INFO] OptiVox_DB - [86c4fbf9-a37c-42ff-8992-f4786bb2b702] POST /api/chat
+2025-10-17 12:08:42 [INFO] OptiVox_DB - Assistant response generated for session session_5b4e18d7
+2025-10-17 12:08:42 [INFO] OptiVox_DB - [86c4fbf9-a37c-42ff-8992-f4786bb2b702] 200 (1.971s)
+2025-10-17 12:09:26 [INFO] OptiVox_DB - [79cf49b8-e409-4cae-b554-9d584dad06f8] POST /api/chat
+2025-10-17 12:09:28 [INFO] OptiVox_DB - Generated SQL: SHOW TABLES;
+2025-10-17 12:09:28 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:09:28 [INFO] OptiVox_DB - Query returned 2 rows
+2025-10-17 12:09:28 [INFO] OptiVox_DB - Query executed for session session_5b4e18d7
+2025-10-17 12:09:28 [INFO] OptiVox_DB - [79cf49b8-e409-4cae-b554-9d584dad06f8] 200 (1.369s)
+2025-10-17 12:10:29 [INFO] OptiVox_DB - [eb0bb3a8-52b1-43d5-9365-22894ede8fe7] POST /api/chat
+2025-10-17 12:10:30 [INFO] OptiVox_DB - Generated SQL: SHOW TABLES;
+2025-10-17 12:10:30 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:10:30 [INFO] OptiVox_DB - Query returned 2 rows
+2025-10-17 12:10:30 [INFO] OptiVox_DB - Query executed for session session_5b4e18d7
+2025-10-17 12:10:30 [INFO] OptiVox_DB - [eb0bb3a8-52b1-43d5-9365-22894ede8fe7] 200 (1.831s)
+2025-10-17 12:11:08 [INFO] OptiVox_DB - [99bdca17-8ce5-4dc7-8ce4-239d9830fb2c] POST /api/chat
+2025-10-17 12:11:10 [INFO] OptiVox_DB - Generated SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(20),
+    bed_number VARCHAR(20),
+    check_in_date DATE,
+    check_out_date DATE,
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);
+2025-10-17 12:11:10 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 12:11:10 [ERROR] OptiVox_DB - Operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(20),
+    bed_number VARCHAR(20),
+    check_in_date DATE,
+    check_out_date DATE,
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:11:10 [ERROR] OptiVox_DB - Chat error: Database operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(20),
+    bed_number VARCHAR(20),
+    check_in_date DATE,
+    check_out_date DATE,
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(20),
+    bed_number VARCHAR(20),
+    check_in_date DATE,
+    check_out_date DATE,
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 92, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: Database operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(20),
+    bed_number VARCHAR(20),
+    check_in_date DATE,
+    check_out_date DATE,
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:11:10 [INFO] OptiVox_DB - [99bdca17-8ce5-4dc7-8ce4-239d9830fb2c] 500 (2.568s)
+2025-10-17 12:11:32 [INFO] OptiVox_DB - [78fd8c61-2110-4f8f-866f-fd7156924322] POST /api/chat
+2025-10-17 12:11:34 [INFO] OptiVox_DB - Generated SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255),
+    bed_number VARCHAR(255),
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);
+2025-10-17 12:11:34 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 12:11:34 [ERROR] OptiVox_DB - Operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255),
+    bed_number VARCHAR(255),
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:11:34 [ERROR] OptiVox_DB - Chat error: Database operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255),
+    bed_number VARCHAR(255),
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255),
+    bed_number VARCHAR(255),
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 92, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: Database operational error: (pymysql.err.OperationalError) (3780, "Referencing column 'student_id' and referenced column 'student_id' in foreign key constraint 'hostel_students_ibfk_1' are incompatible.")
+[SQL: CREATE TABLE hostel_students (
+    student_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    hostel_name VARCHAR(255) NOT NULL,
+    room_number VARCHAR(255),
+    bed_number VARCHAR(255),
+    PRIMARY KEY (student_id),
+    FOREIGN KEY (student_id) REFERENCES veltech_multitech_college_students(student_id)
+);]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-17 12:11:34 [INFO] OptiVox_DB - [78fd8c61-2110-4f8f-866f-fd7156924322] 500 (2.561s)
+2025-10-17 12:13:39 [INFO] OptiVox_DB - [869a204e-668e-4229-a13f-3cf70dd72b80] POST /api/chat
+2025-10-17 12:13:39 [INFO] OptiVox_DB - Introspecting 2 tables...
+2025-10-17 12:13:39 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 12:13:41 [INFO] OptiVox_DB - Generated SQL: SHOW TABLES;
+2025-10-17 12:13:41 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:13:41 [INFO] OptiVox_DB - Query returned 2 rows
+2025-10-17 12:13:41 [INFO] OptiVox_DB - Query executed for session session_5b4e18d7
+2025-10-17 12:13:41 [INFO] OptiVox_DB - [869a204e-668e-4229-a13f-3cf70dd72b80] 200 (1.821s)
+2025-10-17 12:14:21 [INFO] OptiVox_DB - [0eff2852-a4f6-4121-907c-f3f3c125aa57] POST /api/chat
+2025-10-17 12:14:23 [INFO] OptiVox_DB - Generated SQL: DESCRIBE veltech_multitech_college_students;
+2025-10-17 12:14:23 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:14:23 [INFO] OptiVox_DB - Query returned 16 rows
+2025-10-17 12:14:23 [INFO] OptiVox_DB - Query executed for session session_5b4e18d7
+2025-10-17 12:14:23 [INFO] OptiVox_DB - [0eff2852-a4f6-4121-907c-f3f3c125aa57] 200 (2.206s)
+2025-10-17 12:15:54 [INFO] OptiVox_DB - [7154cdc1-06b8-4e00-b685-2a0ad4f49faa] POST /api/chat
+2025-10-17 12:15:57 [INFO] OptiVox_DB - Generated SQL: The user is asking to create a table named "phone". However, the request is ambiguous and lacks specifics about the table's structure (columns, data types, constraints, etc.). It's impossible to generate a valid and useful SQL query without more information. I need to know what columns the user wants in the "phone" table, their data types, and any constraints (e.g., primary key, foreign key, nullability).
+2025-10-17 12:15:57 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:15:57 [ERROR] OptiVox_DB - SQL error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'The user is asking to create a table named "phone". However, the request is ambi\' at line 1')
+[SQL: The user is asking to create a table named "phone". However, the request is ambiguous and lacks specifics about the table's structure (columns, data types, constraints, etc.). It's impossible to generate a valid and useful SQL query without more information. I need to know what columns the user wants in the "phone" table, their data types, and any constraints (e.g., primary key, foreign key, nullability).]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 12:15:57 [ERROR] OptiVox_DB - Chat error: SQL execution error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'The user is asking to create a table named "phone". However, the request is ambi\' at line 1')
+[SQL: The user is asking to create a table named "phone". However, the request is ambiguous and lacks specifics about the table's structure (columns, data types, constraints, etc.). It's impossible to generate a valid and useful SQL query without more information. I need to know what columns the user wants in the "phone" table, their data types, and any constraints (e.g., primary key, foreign key, nullability).]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'The user is asking to create a table named "phone". However, the request is ambi\' at line 1')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 52, in execute_query_safe
+    result = conn.execute(text(sql))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\ OptiVoxDB-1.O\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'The user is asking to create a table named "phone". However, the request is ambi\' at line 1')
+[SQL: The user is asking to create a table named "phone". However, the request is ambiguous and lacks specifics about the table's structure (columns, data types, constraints, etc.). It's impossible to generate a valid and useful SQL query without more information. I need to know what columns the user wants in the "phone" table, their data types, and any constraints (e.g., primary key, foreign key, nullability).]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ OptiVoxDB-1.O\routes\chat.py", line 55, in chat
+    result = await chat_service.process_chat_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 88, in process_chat_message
+    return await self._handle_query_mode(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\chat_service.py", line 485, in _handle_query_mode
+    result = await self.query_service.process_natural_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\services\query_service.py", line 79, in process_natural_query
+    result = await execute_query_safe(engine, sql)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ OptiVoxDB-1.O\db\query_executor.py", line 99, in execute_query_safe
+    raise QueryExecutionError(
+utils.exceptions.QueryExecutionError: SQL execution error: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'The user is asking to create a table named "phone". However, the request is ambi\' at line 1')
+[SQL: The user is asking to create a table named "phone". However, the request is ambiguous and lacks specifics about the table's structure (columns, data types, constraints, etc.). It's impossible to generate a valid and useful SQL query without more information. I need to know what columns the user wants in the "phone" table, their data types, and any constraints (e.g., primary key, foreign key, nullability).]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-10-17 12:15:57 [INFO] OptiVox_DB - [7154cdc1-06b8-4e00-b685-2a0ad4f49faa] 500 (2.489s)
+2025-10-17 12:16:56 [INFO] OptiVox_DB - [6c7cd158-2089-4365-bfdb-962292a3642c] GET /api/health
+2025-10-17 12:16:56 [INFO] OptiVox_DB - [6c7cd158-2089-4365-bfdb-962292a3642c] 200 (0.000s)
+2025-10-17 12:17:18 [INFO] OptiVox_DB - [d08fa1ae-735b-4145-86e8-3685b933d8e9] POST /api/chat
+2025-10-17 12:17:18 [INFO] OptiVox_DB - Session created: session_92e02ec0
+2025-10-17 12:17:24 [INFO] OptiVox_DB - Assistant response generated for session session_92e02ec0
+2025-10-17 12:17:24 [INFO] OptiVox_DB - [d08fa1ae-735b-4145-86e8-3685b933d8e9] 200 (6.322s)
+2025-10-17 12:18:28 [INFO] OptiVox_DB - 🛑 OptiVox DB shutting down...
+2025-10-17 12:18:28 [INFO] OptiVox_DB - Engine disposed: root@localhost@3306@vox
+2025-10-17 12:18:28 [INFO] OptiVox_DB - AI client closed
+2025-10-17 12:18:28 [INFO] OptiVox_DB - ✅ Shutdown complete
+2025-10-17 12:18:32 [INFO] OptiVox_DB - Gemini AI client initialized
+2025-10-17 12:18:33 [INFO] OptiVox_DB - OptiVox DB application configured
+2025-10-17 12:18:33 [INFO] OptiVox_DB - 🚀 OptiVox DB starting up...
+2025-10-17 12:18:33 [INFO] OptiVox_DB - Environment: development
+2025-10-17 12:18:33 [INFO] OptiVox_DB - Debug mode: False
+2025-10-17 12:18:33 [INFO] OptiVox_DB - Directory ready: D:\Vox
+2025-10-17 12:18:33 [INFO] OptiVox_DB - Directory ready: logs
+2025-10-17 12:18:33 [INFO] OptiVox_DB - Directory ready: exports
+2025-10-17 12:18:33 [INFO] OptiVox_DB - ✅ Gemini AI service initialized
+2025-10-17 12:18:33 [INFO] OptiVox_DB - ✅ OptiVox DB ready
+2025-10-17 12:19:01 [INFO] OptiVox_DB - [34859068-e0d3-4954-9cbc-0d0f572941db] GET /api/health
+2025-10-17 12:19:01 [INFO] OptiVox_DB - [34859068-e0d3-4954-9cbc-0d0f572941db] 200 (0.001s)
+2025-10-17 12:19:24 [INFO] OptiVox_DB - [70731711-f477-41f6-b026-7608eb38306d] POST /api/chat
+2025-10-17 12:19:24 [INFO] OptiVox_DB - Session created: session_23e9cb7b
+2025-10-17 12:19:24 [INFO] OptiVox_DB - Database engine created: vox@localhost
+2025-10-17 12:19:24 [INFO] OptiVox_DB - Introspecting 2 tables...
+2025-10-17 12:19:24 [INFO] OptiVox_DB - Schema introspection complete: root@localhost@3306@vox
+2025-10-17 12:19:28 [INFO] OptiVox_DB - Assistant response generated for session session_23e9cb7b
+2025-10-17 12:19:28 [INFO] OptiVox_DB - [70731711-f477-41f6-b026-7608eb38306d] 200 (4.869s)
+2025-10-17 12:19:50 [INFO] OptiVox_DB - [f4aab103-c346-4646-8538-a8dd88d19a37] POST /api/chat
+2025-10-17 12:19:51 [INFO] OptiVox_DB - Generated SQL: SHOW TABLES;
+2025-10-17 12:19:51 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:19:51 [INFO] OptiVox_DB - Query returned 2 rows
+2025-10-17 12:19:51 [INFO] OptiVox_DB - Query executed for session session_23e9cb7b
+2025-10-17 12:19:51 [INFO] OptiVox_DB - [f4aab103-c346-4646-8538-a8dd88d19a37] 200 (1.141s)
+2025-10-17 12:20:15 [INFO] OptiVox_DB - [d0f240ee-c02c-4d2a-b9bf-454deef66e67] POST /api/chat
+2025-10-17 12:20:16 [INFO] OptiVox_DB - Generated SQL: DROP TABLE users;
+2025-10-17 12:20:16 [INFO] OptiVox_DB - Executing DDL query
+2025-10-17 12:20:16 [INFO] OptiVox_DB - Query affected 0 rows
+2025-10-17 12:20:16 [INFO] OptiVox_DB - Query executed for session session_23e9cb7b
+2025-10-17 12:20:16 [INFO] OptiVox_DB - [d0f240ee-c02c-4d2a-b9bf-454deef66e67] 200 (1.001s)
+2025-10-17 12:20:31 [INFO] OptiVox_DB - [ab751d92-71e0-4fa8-9ed4-ef626c8d1da6] POST /api/chat
+2025-10-17 12:20:33 [INFO] OptiVox_DB - Generated SQL: SHOW TABLES;
+2025-10-17 12:20:33 [INFO] OptiVox_DB - Executing READ query
+2025-10-17 12:20:33 [INFO] OptiVox_DB - Query returned 1 rows
+2025-10-17 12:20:33 [INFO] OptiVox_DB - Query executed for session session_23e9cb7b
+2025-10-17 12:20:33 [INFO] OptiVox_DB - [ab751d92-71e0-4fa8-9ed4-ef626c8d1da6] 200 (1.207s)
+2025-10-17 12:21:10 [INFO] OptiVox_DB - [396554f9-5e95-452f-a2b2-bd8943cc7f86] POST /api/chat
+2025-10-17 12:21:22 [INFO] OptiVox_DB - Teaching response generated for session session_23e9cb7b
+2025-10-17 12:21:22 [INFO] OptiVox_DB - [396554f9-5e95-452f-a2b2-bd8943cc7f86] 200 (12.020s)
+2025-10-17 12:21:49 [INFO] OptiVox_DB - [b4681eb1-c603-48ec-9017-4884e7e4020f] POST /api/schema/analyze
+2025-10-17 12:22:08 [INFO] OptiVox_DB - [b4681eb1-c603-48ec-9017-4884e7e4020f] 200 (19.193s)
+2025-10-17 12:22:19 [INFO] OptiVox_DB - [3e2154c7-7b93-4b20-846f-c5e2b5fd2f0c] POST /api/schema/info
+2025-10-17 12:22:19 [INFO] OptiVox_DB - [3e2154c7-7b93-4b20-846f-c5e2b5fd2f0c] 200 (0.002s)
+2025-10-17 12:22:39 [INFO] OptiVox_DB - [41064a7d-ef80-48a5-8f28-67a07b2b4841] GET /api/learn/topics
+2025-10-17 12:22:39 [INFO] OptiVox_DB - [41064a7d-ef80-48a5-8f28-67a07b2b4841] 200 (0.001s)
+2025-10-17 12:22:56 [INFO] OptiVox_DB - [8a8a26ee-d261-467e-9ff5-a8064a6a680e] GET /api/learn/topics
+2025-10-17 12:22:56 [INFO] OptiVox_DB - [8a8a26ee-d261-467e-9ff5-a8064a6a680e] 200 (0.001s)
+2025-10-17 12:22:57 [INFO] OptiVox_DB - [bd9ba7a5-68b9-4a18-ae41-ce304ccfe953] POST /api/learn/explain
+2025-10-17 12:23:18 [INFO] OptiVox_DB - [bd9ba7a5-68b9-4a18-ae41-ce304ccfe953] 200 (21.171s)
+2025-10-17 12:23:18 [INFO] OptiVox_DB - [13b26ef1-2a5e-4752-8cda-163f33b2ed63] GET /api/learn/topics
+2025-10-17 12:23:18 [INFO] OptiVox_DB - [13b26ef1-2a5e-4752-8cda-163f33b2ed63] 200 (0.001s)
+2025-10-17 12:24:43 [INFO] OptiVox_DB - [9593eb93-5b06-49ff-afe3-e7ef9723914b] POST /api/query/debug
+2025-10-17 12:24:50 [INFO] OptiVox_DB - [9593eb93-5b06-49ff-afe3-e7ef9723914b] 200 (7.216s)
